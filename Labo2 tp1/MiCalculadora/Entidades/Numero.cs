@@ -26,6 +26,7 @@ namespace Entidades
 
         public Numero(string strNum)
         {
+            //this.SetNumero = strNume;//revisar aca
             double.TryParse(strNum, out numero);
         }
 
@@ -39,7 +40,19 @@ namespace Entidades
         }
 
         public string DecimalBinario(double numero)
-        {
+        { 
+            /*
+            string retorno = "Valor invàlido";
+            if (numero >= 0)
+            {
+                string auxString = numero.ToString();
+                Convert.ToInt64(auxString, 10);
+                retorno = auxString.ToString();
+            }
+            return retorno;
+            */
+            #region harcode
+            
             int numAux = (int)numero;
 
             string retorno = "Valor invàlido";
@@ -69,6 +82,7 @@ namespace Entidades
                 retorno = aux;
             }
             return retorno;
+            #endregion
         }
 
         public string DecimalBinario(string numero)
@@ -77,7 +91,7 @@ namespace Entidades
             string retorno = "Valor invàlido";
             if (double.TryParse(numero, out double doble))
             {
-                Numero num = new Numero();
+                Numero num = new Numero(doble);//revisar aca
                 retorno = num.DecimalBinario(doble);
             }
             return retorno;
@@ -85,7 +99,18 @@ namespace Entidades
 
         public string BinarioDecimal(string binario)
         {
-            
+            string retorno = "Valor invàlido";
+            long num = Convert.ToInt64(binario, 2);
+            double numDecimal;
+
+            if (double.TryParse(num.ToString(), out numDecimal))
+            {
+                retorno = numDecimal.ToString();
+            }
+            return retorno;
+
+            #region hardcode
+            /*
             string retorno = "Valor invàlido";
             char[] array = binario.ToCharArray();
             // Invertido pues los valores van incrementandose de derecha a izquierda: 16-8-4-2-1
@@ -101,15 +126,8 @@ namespace Entidades
             }
             retorno = Convert.ToString(sum);
             return retorno;
-            
-            
-
-            /*
-            string retorno = "Valor invàlido";
-            long num = Convert.ToInt64(binario, 2);
-            double x = BitConverter.Int64BitsToDouble(num);
-            retorno = Convert.ToString(x);
-            return retorno;*/
+            */
+            #endregion
 
         }
 

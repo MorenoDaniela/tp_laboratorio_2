@@ -4,3 +4,9 @@ C:\Users\Daniela Moreno\Desktop\Backup git\Lab2\Labo2 tp1\MiCalculadora\Entidade
 C:\Users\Daniela Moreno\Desktop\Backup git\Lab2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Daniela Moreno\Desktop\Backup git\Lab2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.dll
 C:\Users\Daniela Moreno\Desktop\Backup git\Lab2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\bin\Debug\Entidades.dll
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.dll
+C:\Users\Daniela Moreno\Desktop\tp_laboratorio_2\Labo2 tp1\MiCalculadora\Entidades\obj\Debug\Entidades.pdb
