@@ -136,6 +136,8 @@ namespace Entidades
         /// ya convertido a decimal</returns>
         public string BinarioDecimal(string binario)
         {
+            #region sin hardcode
+            /*
             string retorno = "Valor invàlido";
             if (binario== "Valor invàlido")
             {
@@ -143,7 +145,7 @@ namespace Entidades
             }
             else
             {
-                long num = Convert.ToInt64(binario, 2);
+                long num = Convert.ToInt64(binario, 2);//En el caso de que el numero no sea binario devuelve una excepcion
 
                 double numDecimal;
                 if (num != 0)
@@ -160,24 +162,27 @@ namespace Entidades
             }
            
             return retorno;
-            #region hardcode
-            /*
+            */
+            #endregion
+
             string retorno = "Valor invàlido";
             char[] array = binario.ToCharArray();
             Array.Reverse(array);
             int numero = 0;
-            for (int i = 0; i < array.Length; i++)
+            int i;
+
+            for (i = 0; i < array.Length; i++)
             {
                 if (array[i] == '1')
                 {
                     numero += (int)Math.Pow(2, i);
+                }else if (array[i]!= '1' && array[i]!='0')
+                {
+                    return retorno;
                 }
             }
             retorno = Convert.ToString(numero);
             return retorno;
-            */
-            #endregion
-
         }
 
         #endregion
