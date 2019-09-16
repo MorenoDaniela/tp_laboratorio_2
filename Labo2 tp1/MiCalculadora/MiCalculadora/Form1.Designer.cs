@@ -143,6 +143,8 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Daniela Moreno 2C";
