@@ -3,50 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Drawing;
 
 namespace Entidades
 {
-    public class Leche : Producto//aca agregue public
+    /// <summary>
+    /// La clase Leche hereda de la clase Producto.
+    /// </summary>
+    public class Leche : Producto
     {
+        #region "Atributos"
+        private ETipo tipo;
+        #endregion
+
+        #region "Enumerados"
         public enum ETipo
         {
             Entera,
             Descremada
         }
+        #endregion
 
-        private ETipo tipo;
-
+        #region "Propiedades"
         /// <summary>
-        /// Por defecto, TIPO será ENTERA
+        /// Las leches tienen 20 calorías
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="patente"></param>
-        /// <param name="color"></param>
+        protected override short CantidadCalorias
+        {
+            get
+            {
+                return 20;
+            }
+        }
+        #endregion
+
+        #region "Constructores"
+        /// <summary>
+        /// Por defecto, TIPO será ENTERA. Crea un objeto Leche reutilizando el constructor de la clase padre Producto.
+        /// </summary>
+        /// <param name="marca">Marca de la leche. </param>
+        /// <param name="patente">Codigo de la leche. </param>
+        /// <param name="color">Color de la leche. </param>
         public Leche(EMarca marca, string codigo, ConsoleColor color)
             : base(codigo, marca, color)
         {
-            this.tipo = ETipo.Entera;//revisar aca como entra segun se llame al constructor
+            this.tipo = ETipo.Entera;
         }
 
+        /// <summary>
+        /// Crea un objeto Leche, reutiliza el constructor de arriba, con la diferencia que se puede especificar el tipo de leche.
+        /// </summary>
+        /// <param name="marca">Marca de la leche. </param>
+        /// <param name="codigo"> Codigo de la leche. </param>
+        /// <param name="color">Color de la leche. </param>
+        /// <param name="tipo">tipo de la leche. </param>
         public Leche(EMarca marca, string codigo, ConsoleColor color, ETipo tipo)
            : this (marca,codigo,color)
         {
             this.tipo = tipo;
         }
 
-        /// <summary>
-        /// Las leches tienen 20 calorías
-        /// </summary>
-        public override short CantidadCalorias//decia protected en vez de public
-        {
-            get
-            {
-                return 20;//decia return this.CantidadCalorias;
-            }
-        }
+        #endregion
 
+        #region "Metodos"
+        /// <summary>
+        /// Retorna todos los datos de un objeto Leche.
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -60,5 +83,6 @@ namespace Entidades
 
             return sb.ToString();
         }
+        #endregion
     }
 }

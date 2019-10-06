@@ -6,25 +6,45 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// La clase Snacks hereda de la clase Producto.
+    /// </summary>
     public class Snacks : Producto
     {
-        public Snacks(EMarca marca, string codigo, ConsoleColor color)
-            : base(codigo, marca, color)
-        {
-
-        }
+        #region "Propiedades"
         /// <summary>
         /// Los snacks tienen 104 calorías
         /// </summary>
-        public override short CantidadCalorias//cambie protected por public
+        protected override short CantidadCalorias
         {
             get
             {
                 return 104;
             }
         }
+        #endregion
 
-        public override string Mostrar()//saque sealead
+        #region "Constructores"
+        /// <summary>
+        /// Crea un objeto Snacks reutlizando el constructor de la clase padre Producto.
+        /// </summary>
+        /// <param name="marca">Marca del snack. </param>
+        /// <param name="codigo">Codigo del snack. </param>
+        /// <param name="color">Color del snack. </param>
+        public Snacks(EMarca marca, string codigo, ConsoleColor color)
+            : base(codigo, marca, color)
+        {
+
+        }
+
+        #endregion
+
+        #region "Metodos"
+        /// <summary>
+        /// Retorna todos los datos de un Snack.
+        /// </summary>
+        /// <returns></returns>
+        public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
@@ -36,5 +56,6 @@ namespace Entidades
 
             return sb.ToString();
         }
+        #endregion
     }
 }

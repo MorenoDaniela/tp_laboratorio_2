@@ -10,10 +10,16 @@ namespace Entidades
     /// <summary>
     /// La clase Producto no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
-    public abstract class Producto//no puede ser sealed porque las clases sealed no heredan, saque sealed,
-        //ademas el dibujo decia que la clase es abstracta
+    public abstract class Producto
     {
-        public enum EMarca//aca agregue public
+        #region "Atributos"
+        private EMarca marca;
+        private string codigoDeBarras;
+        private ConsoleColor colorPrimarioEmpaque;
+        #endregion
+
+        #region "Enumerados"
+        public enum EMarca
         {
             Serenisima,
             Campagnola,
@@ -22,71 +28,61 @@ namespace Entidades
             Sancor,
             Pepsico
         }
-        protected EMarca marca;
-        private string codigoDeBarras;
-        private ConsoleColor colorPrimarioEmpaque;
+        #endregion
 
+        #region "Propiedades"
         /// <summary>
         /// ReadOnly: Retornará la cantidad de ruedas del vehículo
         /// </summary>
-        public abstract short CantidadCalorias//aca agregue public 
+        protected abstract short CantidadCalorias
         {
             get;
-            //set;
         }
+        #endregion
 
+        #region "Constructores"
+        public Producto(string codigo, EMarca marca, ConsoleColor color)
+        {
+            this.codigoDeBarras = codigo;
+            this.marca = marca;
+            this.colorPrimarioEmpaque = color;
+        }
+        #endregion
+
+        #region "Metodos"
         /// <summary>
-        /// Publica todos los datos del Producto.
+        /// Publica todos los datos del Producto. Este metodo es virtual porque sera sobrescrito en las clases hijas.
         /// </summary>
         /// <returns></returns>
-        public virtual string Mostrar()//aca era sealed, agregue virtual porque los metodos virtuales se sobrescriben con override en las clases hijas
+        public virtual string Mostrar()
         {
-
-            //return (string)this.ToString();
-            return (string)this;
-            //return this.ToString();
-            /*
             StringBuilder cadena = new StringBuilder();
             cadena.AppendFormat("Marca: {0} \n\r" ,this.marca);
             cadena.AppendFormat("Codigo de barras: {0} \n\r" ,this.codigoDeBarras);
-            cadena.AppendFormat("Color: {0} \n\r" ,this.colorPrimarioEmpaque);
-            return cadena.ToString();*/
-            //return this;*/
+            cadena.AppendFormat("Color: {0} " ,this.colorPrimarioEmpaque);
+            return cadena.ToString();
         }
+        #endregion
 
-        
-        public static explicit operator string(Producto p)//firma original private static explicit operator string
-        {
-            //return p.Mostrar();
-            
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendFormat("CODIGO DE BARRAS: {0} \n", p.codigoDeBarras);
-            sb.AppendFormat("MARCA          : {0}\n", p.marca.ToString());
-            sb.AppendFormat("COLOR EMPAQUE  : {0}\n", p.colorPrimarioEmpaque.ToString());
-            sb.AppendFormat("---------------------");
-
-            return sb.ToString();
-        }
+        #region "Operadores"
 
         /// <summary>
         /// Dos productos son iguales si comparten el mismo código de barras
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="producto1"></param>
+        /// <param name="producto2"></param>
         /// <returns></returns>
-        public static bool operator ==(Producto v1, Producto v2)
+        public static bool operator ==(Producto producto1, Producto producto2)
         {
             bool retorno = false;
-            if (!(v1 is null) && !(v2 is null))
+            if (!(producto1 is null) && !(producto2 is null))
             {
-                if (v1.codigoDeBarras == v2.codigoDeBarras)
+                if (producto1.codigoDeBarras == producto2.codigoDeBarras)
                 {
                     retorno = true;
                 }
             }
             return retorno;
-            //return (v1.codigoDeBarras == v2.codigoDeBarras);
         }
         /// <summary>
         /// Dos productos son distintos si su código de barras es distinto
@@ -94,23 +90,22 @@ namespace Entidades
         /// <param name="v1"></param>
         /// <param name="v2"></param>
         /// <returns></returns>
-        public static bool operator !=(Producto v1, Producto v2)
+        public static bool operator !=(Producto producto1, Producto producto2)
         {
-            
-            bool retorno = true;
-            if (v1==v2)
-            {
-                retorno = false;
-            }
-            return retorno;
-            //return (v1.codigoDeBarras == v2.codigoDeBarras);
+            return !(producto1.codigoDeBarras == producto2.codigoDeBarras);
         }
 
-        public Producto (string codigo, EMarca marcaE, ConsoleColor color)//agregue este constructor faltaba
+        #endregion
+
+        #region "Casteo"
+        /// <summary>
+        /// Devuelve un string con todos los datos del producto recibido, invoca al metodo Mostrar.
+        /// </summary>
+        /// <param name="p">Producto recibido.</param>
+        public static explicit operator string(Producto p)
         {
-            this.codigoDeBarras = codigo;
-            this. marca = marcaE;
-            this.colorPrimarioEmpaque = color;
+            return p.Mostrar();
         }
+        #endregion
     }
 }

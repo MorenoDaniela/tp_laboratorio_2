@@ -29,7 +29,7 @@ namespace TP_02
             Snacks a2 = new Snacks(Producto.EMarca.Arcor, "TYU426", ConsoleColor.DarkBlue);
             Snacks a3 = new Snacks(Producto.EMarca.Sancor, "IOP852", ConsoleColor.Green);
             Snacks a4 = new Snacks(Producto.EMarca.Sancor, "TRE321", ConsoleColor.Green);
-            
+
             // Agrego 8 ítems (los últimos 2 no deberían poder agregarse ni el m1 repetido) y muestro
             changoDeCompras += c1;
             changoDeCompras += c2;
@@ -67,7 +67,6 @@ namespace TP_02
             Console.Clear();
 
             // Muestro solo Snacks
-            //Snacks.Mostrar(changoDeCompras, Changuito.ETipo.Snacks); aca toque tambien
             Console.WriteLine(changoDeCompras.Mostrar(changoDeCompras, Changuito.ETipo.Snacks));
             Console.WriteLine("<-------------PRESIONE UNA TECLA PARA SALIR------------->");
             Console.ReadKey();
