@@ -1,0 +1,13 @@
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Entidades_Instanciables.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Entidades_Instanciables.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Archivos.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Clases Abstractas.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Excepciones.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Archivos.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Clases Abstractas.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\bin\Debug\Excepciones.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\obj\Debug\Entidades_Instanciables.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\obj\Debug\Entidades_Instanciables.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\obj\Debug\Entidades_Instanciables.csproj.CopyComplete
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\obj\Debug\Entidades_Instanciables.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\TP-03\Moreno.Daniela.2C.TP3\Entidades_Instanciables\obj\Debug\Entidades_Instanciables.pdb
