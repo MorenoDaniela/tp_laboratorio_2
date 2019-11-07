@@ -65,7 +65,9 @@ namespace Entidades_Instanciables
         {
             get
             {
+                
                 return jornada[i];
+
             }
             set
             {
@@ -134,6 +136,7 @@ namespace Entidades_Instanciables
                     if (profe == clase)
                     {
                         profesor = profe;
+                        break;
                         //return profe;
                     }else
                     {

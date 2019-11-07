@@ -44,6 +44,7 @@ namespace Entidades_Instanciables
                     if (materia == clase)
                     {
                         retorno = true;
+                        break;
                     }
                 }
             }
@@ -66,7 +67,7 @@ namespace Entidades_Instanciables
             cadena.AppendFormat("CLASES DEL DIA: \r\n");
             foreach (EClases materia in this.clasesDelDia)
             {
-                cadena.AppendFormat("{0}\r\n ", materia.ToString());
+                cadena.AppendFormat("{0}\r\n", materia.ToString());
             }
             return cadena.ToString();
         }
@@ -81,7 +82,7 @@ namespace Entidades_Instanciables
         void _randomClases()
         {
             int value;
-            value = random.Next(0, 3);
+            value = random.Next(0, 4);
             Thread.Sleep(300);
             EClases aux = (EClases)value;
             clasesDelDia.Enqueue(aux);            
