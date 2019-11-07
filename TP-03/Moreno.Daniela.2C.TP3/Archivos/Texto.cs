@@ -16,14 +16,14 @@ namespace Archivos
             
             try
             {
-                using (StreamWriter str = new StreamWriter(archivo, true))
+                using (StreamWriter str = new StreamWriter(archivo, false))
                 {
                     str.WriteLine(datos);
                     retorno = true;
                 }
-            }catch(ArchivosException innerException)
+            }catch(Exception innerException)
             {
-                Console.WriteLine(innerException.Message);
+                throw new ArchivosException(innerException);
             }
             
             return retorno;
@@ -40,10 +40,9 @@ namespace Archivos
                     datos = str.ReadToEnd();
                     retorno = true;
                 }
-            }catch (ArchivosException innerException)
+            }catch (Exception innerException)
             {
-                datos = "";
-                Console.WriteLine(innerException.Message);
+                throw new ArchivosException(innerException);
             }
             return retorno;
         }
