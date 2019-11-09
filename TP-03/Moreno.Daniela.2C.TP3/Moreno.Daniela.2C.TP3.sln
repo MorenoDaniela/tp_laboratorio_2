@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesAbstractas", "Clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{74C93D2E-BF25-470C-A076-3852F98E9DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades_Instanciables", "Entidades_Instanciables\Entidades_Instanciables.csproj", "{0322FB2B-710C-4D89-A0A3-BED4D99C3A4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesInstanciables", "Entidades_Instanciables\EntidadesInstanciables.csproj", "{0322FB2B-710C-4D89-A0A3-BED4D99C3A4C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{7354DC5E-B00B-4750-A05F-3C6DA52FAAF9}"
 EndProject

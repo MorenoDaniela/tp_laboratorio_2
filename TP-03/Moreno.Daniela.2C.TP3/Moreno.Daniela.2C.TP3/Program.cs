@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
 using EntidadesAbstractas;
-using Entidades_Instanciables;
+using EntidadesInstanciables;
 
 namespace Moreno.Daniela._2C.TP3
 {

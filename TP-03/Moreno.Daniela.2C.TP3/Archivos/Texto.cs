@@ -10,41 +10,48 @@ namespace Archivos
 {
     public class Texto : IArchivo<string>
     {
+        /// <summary>
+        /// Guarda un archivo de texto.
+        /// </summary>
+        /// <param name="archivo">PATH RECIBIDO</param>
+        /// <param name="datos">DATOS RECIBIDOS</param>
+        /// <returns>Retorna true si logro guardar los datos, lanza una exception si no.</returns>
         public bool Guardar(string archivo, string datos)
         {
-            bool retorno = false;
-            
             try
             {
-                using (StreamWriter str = new StreamWriter(archivo, false))
+                using (StreamWriter str = new StreamWriter(archivo, File.Exists(archivo)))
                 {
                     str.WriteLine(datos);
-                    retorno = true;
+                    return true;
                 }
             }catch(Exception innerException)
             {
                 throw new ArchivosException(innerException);
             }
             
-            return retorno;
         }
 
+        /// <summary>
+        /// Lee los datos de un archivo de texto.
+        /// </summary>
+        /// <param name="archivo">PATH RECIBIDO.</param>
+        /// <param name="datos">Datos recibidos.</param>
+        /// <returns>Retorna true si logro leer, lanza una exception sino.</returns>
         public bool Leer (string archivo, out string datos)
         {
-            bool retorno = false;
             StreamReader str = null;
             try
             {
-                using (str = new StreamReader(archivo))
+                using (str = new StreamReader(archivo,File.Exists(archivo)))
                 {
                     datos = str.ReadToEnd();
-                    retorno = true;
+                    return true;
                 }
             }catch (Exception innerException)
             {
                 throw new ArchivosException(innerException);
             }
-            return retorno;
         }
             
             

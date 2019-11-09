@@ -60,9 +60,9 @@
       <Project>{67999e6d-c16f-49d4-a6bd-e22243edbc94}</Project>
       <Name>EntidadesAbstractas</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades_Instanciables\Entidades_Instanciables.csproj">
+    <ProjectReference Include="..\Entidades_Instanciables\EntidadesInstanciables.csproj">
       <Project>{0322fb2b-710c-4d89-a0a3-bed4d99c3a4c}</Project>
-      <Name>Entidades_Instanciables</Name>
+      <Name>EntidadesInstanciables</Name>
     </ProjectReference>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">
       <Project>{74c93d2e-bf25-470c-a076-3852f98e9df9}</Project>
