@@ -1,0 +1,10 @@
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.Form1.resources
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.pdb
