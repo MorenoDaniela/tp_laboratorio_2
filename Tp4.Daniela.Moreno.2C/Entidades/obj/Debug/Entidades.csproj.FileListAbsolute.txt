@@ -1,0 +1,9 @@
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\bin\Debug\Entidades.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\bin\Debug\Excepciones.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\obj\Debug\Entidades.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\Entidades\obj\Debug\Entidades.pdb

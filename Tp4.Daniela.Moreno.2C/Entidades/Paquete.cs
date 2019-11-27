@@ -8,12 +8,13 @@ using System.Threading;
 namespace Entidades
 {
     #pragma warning disable CS0660, CS0661
+    
     public class Paquete : IMostrar<Paquete>
     {
         private string direccionEntrega;
         private EEstado estado;
         private string trakingID;
-        public delegate void DelegadoEstado(EEstado estado);
+        public delegate void DelegadoEstado(object sender, EventArgs estado);
         public event DelegadoEstado InformaEstado;
         public enum EEstado
         {
@@ -67,13 +68,21 @@ namespace Entidades
 
         public void MockCicloDeVida()
         {
-            int aux = (int)this.estado;
-            while (aux!=2)
+            while (this.Estado != EEstado.Entregado)
             {
                 Thread.Sleep(4000);
-                aux++;
+                if (this.Estado == EEstado.Ingresado)
+                {
+                    this.Estado = EEstado.EnViaje;
+                }
+                else if (this.Estado == EEstado.EnViaje)
+                {
+                    this.Estado = EEstado.Entregado;
+                }
+                this.InformaEstado.Invoke(this.estado, EventArgs.Empty);
             }
-            
+
+            PaqueteDAO.InsertarPaquete(this);
         }
 
         public string MostrarDatos(IMostrar<Paquete> elemento)

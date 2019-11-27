@@ -8,3 +8,8 @@ C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debu
 C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
 C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.exe
 C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\Entidades.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\Excepciones.dll
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\Entidades.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\bin\Debug\Excepciones.pdb
+C:\Users\Dell\Desktop\tp_laboratorio_2\Tp4.Daniela.Moreno.2C\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete

@@ -15,15 +15,27 @@ namespace Entidades
         static PaqueteDAO()
         {
 
-            conexion = new SqlConnection(AppDomain.CurrentDomain.BaseDirectory + "DatosPaquetes");
-            conexion.Open();
+            conexion = new SqlConnection(@"Data Source=Dell-PC\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True");
+           
         }
         public static bool InsertarPaquete(Paquete p)
         {
-            StringBuilder cadena = new StringBuilder();
-            cadena.AppendFormat("CREATE TABLE DatosPaquetes(Estado CHAR, ID CHAR, DIRECCION CHAR)");
-            comando = new SqlCommand(cadena.ToString(), conexion);
-            comando.ExecuteNonQuery();
+            bool retorno = false;//mirar retornos quedaron feos y analizar si tirar exceptionci
+            try
+            {
+                conexion.Open();
+                StringBuilder cadena = new StringBuilder();
+                cadena.AppendFormat("INSERT INTO Paquetes VALUES('{0}', '{1}', 'Daniela Moreno')", p.DireccionEntrega, p.TrakingID);
+                comando = new SqlCommand(cadena.ToString(), conexion);
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                retorno = true;
+            }catch (Exception inner)
+            {
+                throw new Exception("Error en base de datos", inner);
+            }
+            return retorno;
+            
         }
         
         

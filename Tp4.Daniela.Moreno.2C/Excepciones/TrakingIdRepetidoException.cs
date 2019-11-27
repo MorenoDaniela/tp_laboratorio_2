@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class TrakingIdRepetidoException : Exception
     {
-        public TrakingIdRepetidoException() : base ("Error en traking id")
+        public TrakingIdRepetidoException() : base ("El TrakingId que ha ingresado es repetido")
         {
 
         }
