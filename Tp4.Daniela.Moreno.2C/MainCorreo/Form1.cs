@@ -105,12 +105,18 @@ namespace MainCorreo
         {
             if(!(elemento is null))
             {
-                //if (elemento is Paquete)
-                //{
-                    rtbMostrar.Clear();
-                    rtbMostrar.Text = elemento.MostrarDatos(elemento);
+                
+                rtbMostrar.Clear();
+                rtbMostrar.Text = elemento.MostrarDatos(elemento);
+                try
+                {
                     rtbMostrar.Text.Guardar("salida.txt");
-                //}
+                }catch (Exception salidaException)
+                {
+                    MessageBox.Show(salidaException.Message);
+                }
+                
+               
             }
         }
         private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)

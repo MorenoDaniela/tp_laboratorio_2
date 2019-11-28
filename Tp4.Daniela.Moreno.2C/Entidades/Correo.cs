@@ -39,7 +39,7 @@ namespace Entidades
             string datosCompletos = "";
             foreach (Paquete p in correoLocal.Paquetes)
             {
-                datosCompletos += string.Format("{0} para {1} ({2}) \n", p.TrakingID, p.DireccionEntrega, p.Estado.ToString());
+                datosCompletos += string.Format("{0} para {1} ({2}) \n\r", p.TrakingID, p.DireccionEntrega, p.Estado.ToString());
             }
             return datosCompletos;
             

@@ -202,8 +202,10 @@
             // 
             // rtbMostrar
             // 
+            this.rtbMostrar.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.rtbMostrar.Location = new System.Drawing.Point(15, 312);
             this.rtbMostrar.Name = "rtbMostrar";
+            this.rtbMostrar.ReadOnly = true;
             this.rtbMostrar.Size = new System.Drawing.Size(313, 106);
             this.rtbMostrar.TabIndex = 2;
             this.rtbMostrar.Text = "";
