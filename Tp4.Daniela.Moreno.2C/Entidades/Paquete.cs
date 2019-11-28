@@ -81,12 +81,22 @@ namespace Entidades
                 }
                 this.InformaEstado.Invoke(this.estado, EventArgs.Empty);
             }
-
-            PaqueteDAO.InsertarPaquete(this);
+            try
+            {
+                PaqueteDAO.InsertarPaquete(this);
+            }catch (Exception e)
+            {
+                throw new Exception(e.Message,e);
+            }
+           
         }
 
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
+            /*
+            Paquete p = (Paquete)elemento;
+            return string.Format("{0} para {1}\n", p.trakingID, p.direccionEntrega);
+            */
             string retorno = "{0} para {1}";
             if (elemento is Paquete)
             {
@@ -118,10 +128,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            StringBuilder cadena = new StringBuilder();
-            cadena.AppendFormat("{0}",this.MostrarDatos(this));
-            cadena.AppendFormat("{0}", this.Estado);
-            return cadena.ToString();
+            return MostrarDatos(this);
         }
 
 

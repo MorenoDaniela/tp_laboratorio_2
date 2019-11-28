@@ -14,10 +14,11 @@ namespace MainCorreo
 {
     public partial class Form1 : Form
     {
-        Correo correo;
+        private Correo correo;
         public Form1()
         {
             InitializeComponent();
+            correo = new Correo();
         }
         
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -33,11 +34,10 @@ namespace MainCorreo
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            correo = new Correo();
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+            }
         }
 
         private void paquete_InformaEstado(object sender, EventArgs e)
@@ -105,12 +105,12 @@ namespace MainCorreo
         {
             if(!(elemento is null))
             {
-                if (elemento is Paquete)
-                {
+                //if (elemento is Paquete)
+                //{
                     rtbMostrar.Clear();
                     rtbMostrar.Text = elemento.MostrarDatos(elemento);
                     rtbMostrar.Text.Guardar("salida.txt");
-                }
+                //}
             }
         }
         private void MostrarToolStripMenuItem_Click(object sender, EventArgs e)

@@ -34,13 +34,23 @@ namespace Entidades
 
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
+            
+            Correo correoLocal = (Correo)elementos;
+            string datosCompletos = "";
+            foreach (Paquete p in correoLocal.Paquetes)
+            {
+                datosCompletos += string.Format("{0} para {1} ({2}) \n", p.TrakingID, p.DireccionEntrega, p.Estado.ToString());
+            }
+            return datosCompletos;
+            
+            /*
             string s = "";
             if (elementos is List<Paquete>)
             {
                 //string s = string.Format ("{0} {1}",elementos.MostrarDatos,elementos.Es)
                 s = string.Format("{0}", elementos.ToString());
             }
-            return s;
+            return s;*/
         }
 
         public void FinEntregas()
@@ -56,22 +66,30 @@ namespace Entidades
 
         public static Correo operator +(Correo c, Paquete p)
         {
+            bool retorno = false;
             if (!(c is null) && !(p is null))
             {
                 foreach (Paquete paq in c.paquetes)
                 {
-                    if (paq!=p)
-                    {
-                        c.paquetes.Add(p);
-                        Thread hilo = new Thread(p.MockCicloDeVida);//aca llamo al metodo
-                        
-                        c.mockPaquetes.Add(hilo);
-                        hilo.Start();
-                        return c;
-                    }else
+                    if (paq == p)
                     {
                         throw new TrakingIdRepetidoException();
                     }
+
+                }
+                if (!retorno)
+                {
+                    c.Paquetes.Add(p);
+                    try
+                    {
+                        Thread t = new Thread(p.MockCicloDeVida);
+                        t.Start();
+                        c.mockPaquetes.Add(t);
+                    }catch (Exception exception)
+                    {
+                        throw new Exception(exception.Message,exception);
+                    }
+                    
                 }
             }
             return c;//dejar mas lindo

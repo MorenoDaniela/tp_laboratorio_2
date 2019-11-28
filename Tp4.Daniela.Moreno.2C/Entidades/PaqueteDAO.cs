@@ -20,7 +20,7 @@ namespace Entidades
         }
         public static bool InsertarPaquete(Paquete p)
         {
-            bool retorno = false;//mirar retornos quedaron feos y analizar si tirar exceptionci
+            //bool retorno = false;//mirar retornos quedaron feos y analizar si tirar exceptionci
             try
             {
                 conexion.Open();
@@ -28,13 +28,17 @@ namespace Entidades
                 cadena.AppendFormat("INSERT INTO Paquetes VALUES('{0}', '{1}', 'Daniela Moreno')", p.DireccionEntrega, p.TrakingID);
                 comando = new SqlCommand(cadena.ToString(), conexion);
                 comando.ExecuteNonQuery();
-                conexion.Close();
-                retorno = true;
+                //conexion.Close();
+                return true;
             }catch (Exception inner)
             {
                 throw new Exception("Error en base de datos", inner);
             }
-            return retorno;
+            finally
+            {
+                conexion.Close();
+            }
+          //  return retorno;
             
         }
         

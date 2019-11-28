@@ -34,21 +34,21 @@
             this.lblEnViaje = new System.Windows.Forms.Label();
             this.lblIngresado = new System.Windows.Forms.Label();
             this.listBoxEntregado = new System.Windows.Forms.ListBox();
+            this.menuMostrar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxEnviaje = new System.Windows.Forms.ListBox();
             this.listBoxIngresado = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtBoxDireccion = new System.Windows.Forms.TextBox();
             this.mskBoxID = new System.Windows.Forms.MaskedTextBox();
             this.lblTrakingID = new System.Windows.Forms.Label();
             this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
-            this.txtBoxDireccion = new System.Windows.Forms.TextBox();
-            this.menuMostrar = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.menuMostrar.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,7 +92,6 @@
             this.lblIngresado.Size = new System.Drawing.Size(54, 13);
             this.lblIngresado.TabIndex = 3;
             this.lblIngresado.Text = "Ingresado";
-
             // 
             // listBoxEntregado
             // 
@@ -102,6 +101,20 @@
             this.listBoxEntregado.Name = "listBoxEntregado";
             this.listBoxEntregado.Size = new System.Drawing.Size(204, 238);
             this.listBoxEntregado.TabIndex = 2;
+            // 
+            // menuMostrar
+            // 
+            this.menuMostrar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarToolStripMenuItem});
+            this.menuMostrar.Name = "menuMostrar";
+            this.menuMostrar.Size = new System.Drawing.Size(125, 26);
+            // 
+            // mostrarToolStripMenuItem
+            // 
+            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.mostrarToolStripMenuItem.Text = "Mostrar...";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.MostrarToolStripMenuItem_Click);
             // 
             // listBoxEnviaje
             // 
@@ -133,7 +146,22 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Paquete";
-
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(6, 73);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.TabIndex = 5;
+            this.lblDireccion.Text = "Dirección";
+            // 
+            // txtBoxDireccion
+            // 
+            this.txtBoxDireccion.Location = new System.Drawing.Point(6, 89);
+            this.txtBoxDireccion.Name = "txtBoxDireccion";
+            this.txtBoxDireccion.Size = new System.Drawing.Size(181, 20);
+            this.txtBoxDireccion.TabIndex = 4;
             // 
             // mskBoxID
             // 
@@ -180,36 +208,6 @@
             this.rtbMostrar.TabIndex = 2;
             this.rtbMostrar.Text = "";
             // 
-            // txtBoxDireccion
-            // 
-            this.txtBoxDireccion.Location = new System.Drawing.Point(6, 89);
-            this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(181, 20);
-            this.txtBoxDireccion.TabIndex = 4;
-            // 
-            // menuMostrar
-            // 
-            this.menuMostrar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarToolStripMenuItem});
-            this.menuMostrar.Name = "menuMostrar";
-            this.menuMostrar.Size = new System.Drawing.Size(125, 26);
-            // 
-            // mostrarToolStripMenuItem
-            // 
-            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.mostrarToolStripMenuItem.Text = "Mostrar...";
-            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.MostrarToolStripMenuItem_Click);
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(6, 73);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
-            this.lblDireccion.TabIndex = 5;
-            this.lblDireccion.Text = "Dirección";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,12 +220,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Correo UTN por Daniela Moreno 2C";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuMostrar.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.menuMostrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
