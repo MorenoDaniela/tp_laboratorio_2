@@ -15,7 +15,7 @@ namespace Entidades
         static PaqueteDAO()
         {
 
-            conexion = new SqlConnection(@"Data Source=Dell-PC\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=DELL-PC\SQLEXPRESS;Initial Catalog=correo-sp-2017;Integrated Security=True");
            
         }
         public static bool InsertarPaquete(Paquete p)
